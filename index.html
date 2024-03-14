@@ -7,18 +7,24 @@
   <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Enlace al archivo CSS proporcionado -->
   <style>
     body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightblue; /* Cambia "lightblue" por el color que desees */
     }
 
     header {
       text-align: center;
+      border-bottom: 1px solid black; /* Línea que separa el encabezado */
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      width: 100%;
     }
 
     .title-logo {
       display: flex;
       align-items: center;
+      justify-content: center; /* Centra horizontalmente */
     }
 
     .title-logo h1 {
@@ -49,6 +55,7 @@
       flex: 1;
       max-width: 600px; /* Ajustar según sea necesario */
       margin: 10px;
+      position: relative;
     }
 
     aside {
@@ -77,6 +84,35 @@
       flex: 1;
       max-width: 50%;
     }
+
+    /* Agrega transición de opacidad a las imágenes */
+    .image-pair img {
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    /* Aplica transición de opacidad en hover */
+    .image-pair a:hover img {
+      opacity: 0.7;
+    }
+
+    footer {
+      border-top: 1px solid black; /* Línea que separa el pie de página */
+      margin-top: 20px;
+      padding-top: 10px;
+      width: 100%;
+    }
+
+    /* Línea vertical que separa la sección de bienvenida de la sección de fotos favoritas */
+    .vertical-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 100%; /* Ubicación en el centro */
+      border-left: 1px solid black; /* Línea vertical */
+      width: 1px; /* Ancho de la línea */
+      height: 100%; /* Altura de la línea */
+      margin-left: -1px; /* Compensar la mitad del ancho para centrar correctamente */
+    }
   </style>
 </head>
 <body>
@@ -85,7 +121,6 @@
   <header>
     <div class="title-logo">
       <h1>Birdwatching</h1>
-      <img src="dove.png" alt="a simple dove logo" style="width: 50px; height: auto;">
     </div>
     <nav>
       <ul>
@@ -104,6 +139,8 @@
       <h2>Welcome</h2>
       <p>Welcome to our fake birdwatching site. If this were a real site, it would be the ideal place to come to learn more about birdwatching, whether you are a beginner looking to learn how to get into birding, or an expert wanting to share ideas, tips, and photos with other like-minded people.</p>
       <p>So don't waste time! Get what you need, then turn off that computer and get out into the great outdoors!</p>
+      <!-- Línea vertical que separa la sección de bienvenida de la sección de fotos favoritas -->
+      <div class="vertical-line"></div>
     </section>
     <aside>
       <h3>Favourite photos</h3>
@@ -128,3 +165,4 @@
 
 </body>
 </html>
+
